@@ -27,7 +27,8 @@ namespace Algorithm.Dynamic_Programming
     /// </summary>
     internal class SherlockAndCost
     {
-        static int Cost(int n1, int n2) {
+        static int Cost(int n1, int n2)
+        {
             return Math.Abs(n1 - n2);
         }
 
@@ -36,7 +37,8 @@ namespace Algorithm.Dynamic_Programming
             var S1 = 0;
             var S2 = 0;
 
-            for (int i = 1; i < B.Count; i++) {
+            for (int i = 1; i < B.Count; i++)
+            {
                 // For Example A[i] = 100 and A[i-1] = 100
                 // S1 => comes from Any Value(Max or 1), Max
                 // S2 => comes from Any Value(Max or 1), 1
@@ -71,7 +73,8 @@ namespace Algorithm.Dynamic_Programming
                 new List<int> { 10, 1, 1, 10, 1, 10 }   // 36
             };
 
-            for (int i = 0; i < Bs.Length; i++) {
+            for (int i = 0; i < Bs.Length; i++)
+            {
                 var B = Bs[i];
                 var result = MaxCost(Bs[i]);
                 SharedKernel.WriteList(B);
